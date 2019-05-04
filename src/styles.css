@@ -1,8 +1,29 @@
 /* You can add global styles to this file, and also import other style files */
+@import './assets/bootstrap.min.css';
+
+.jumbotron h1 {
+  text-transform: capitalize;
+  color: orange;
+}
+
+.navbar {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
 .jumbotron {
+  margin-top: 48px;
+  padding-bottom: 8px;
+  margin-bottom: 16px;
   background-color: #606060;
   color: yellow
 }
+
+.pageContent {
+  padding-right: 32px;
+  padding-left: 32px;
+}
+
 .card {
   margin-bottom: 20px;
 }
