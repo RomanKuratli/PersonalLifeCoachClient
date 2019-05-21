@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { QuotesService } from 'src/app/dataServices/quotes.service';
 
 export interface Quote {
-  quote_hash: number;
+  _id?: string;
+  quote_hash?: number;
   lang: string;
   quote: string;
   author: string;
@@ -19,7 +20,6 @@ export class QuotesComponent implements OnInit {
   quotes: Quote[] = null;
 
   formData: Quote = {
-    quote_hash: -1,
     lang: 'de',
     quote: null,
     author: null,
@@ -46,4 +46,14 @@ export class QuotesComponent implements OnInit {
     );
   }
 
+  onDeleteBtnClicked(quoteId: string) {
+    console.log('delete quote with id: ' + quoteId);
+    this.quotesService.deleteQuote(quoteId).subscribe(
+      () => { // success path
+        this.quotes = this.quotes.filter((quote) => quote._id !== quoteId);
+        console.log('quote deleted with id: ' + quoteId);
+      },
+      error => console.error('error deleting quote:', error)
+    );
+  }
 }

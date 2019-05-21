@@ -20,4 +20,8 @@ export class QuotesService {
   public insertQuote(quote: Quote) {
     return this.http.post<Quote>(this.quotesUrl, quote);
   }
+
+  public deleteQuote(quoteId: string): Observable<{}> {
+    return this.http.delete(`${this.quotesUrl}/${quoteId}`);
+  }
 }
