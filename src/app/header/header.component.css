@@ -1,0 +1,12 @@
+.jumbotron {
+  margin-top: 48px;
+  padding-bottom: 8px;
+  margin-bottom: 16px;
+  background-color: #606060;
+  color: yellow
+}
+
+.jumbotron h1 {
+  text-transform: capitalize;
+  color: orange;
+}

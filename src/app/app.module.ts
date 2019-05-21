@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav.component';
@@ -13,6 +15,7 @@ import { ActivitiesComponent } from './pages/activities/activities.component';
 import { AstroComponent } from './pages/astro/astro.component';
 import { ConfigComponent } from './pages/config/config.component';
 import { ThanksComponent } from './pages/thanks/thanks.component';
+import { QuoteCardComponent } from './widgets/quote-card/quote-card.component';
 
 @NgModule({
   declarations: [
@@ -26,11 +29,14 @@ import { ThanksComponent } from './pages/thanks/thanks.component';
     ActivitiesComponent,
     AstroComponent,
     ConfigComponent,
-    ThanksComponent
+    ThanksComponent,
+    QuoteCardComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    HttpClientModule,
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

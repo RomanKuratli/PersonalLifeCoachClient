@@ -1,1 +1,41 @@
 <h1>Zitate</h1>
+<h2>Zitat erfassen</h2>
+<form (ngSubmit)="onSubmit()" #heroForm="ngForm">
+  <div class="form-group">
+    <label for="quote">Zitat:</label>
+    <textarea name="quote" class="form-control" [(ngModel)]="formData.quote" required></textarea>
+  </div>
+  <div class="form-group">
+    <label for="author">Author:</label>
+    <input name="author" class="form-control" type="text" [(ngModel)]="formData.author" required>
+  </div>
+  <div class="form-group">
+    <label for="source">Quelle:</label>
+    <input name="source" class="form-control" type="text" [(ngModel)]="formData.source" required>
+  </div>
+  <div class="form-group">
+    <label for="lang">Sprache:</label>
+    <select name="lang" class="form-control" [(ngModel)]="formData.lang" required>
+      <option value="de">Deutsch</option>
+      <option value="en">Englisch</option>
+    </select>
+  </div>
+  <input type="submit" value="Erfassen">
+</form>
+<hr>
+<h2>Zitatsammlung</h2>
+<div class="container card" *ngFor="let quote of quotes">
+  <div class="card-body">
+  <div class="row">
+    <div class="col-11">
+      <app-quote-card [quote]="quote"></app-quote-card>
+    </div>
+    <div class="col-1">
+      <form action="" method="post">
+        <!-- TODO <input type="hidden" value="{{ quote["_id"] }}" name="key" id="key"> -->
+        <button type="submit"><span class="oi oi-delete"></span></button>
+      </form>
+    </div>
+  </div>
+  </div>
+</div>
