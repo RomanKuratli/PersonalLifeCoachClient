@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { QuotesService } from 'src/app/dataServices/quotes.service';
+import { AlertService } from 'src/app/alert.service';
 
 export interface Quote {
   _id?: string;
@@ -26,7 +27,7 @@ export class QuotesComponent implements OnInit {
     source: null
   };
 
-  constructor(private quotesService: QuotesService) {
+  constructor(private quotesService: QuotesService, private alertService: AlertService) {
     console.log('src/app/pages/quotes.component.ts: constructor called');
     console.log(this.quotesService);
     console.log(this.quotesService.getQuotes);
@@ -52,6 +53,7 @@ export class QuotesComponent implements OnInit {
       () => { // success path
         this.quotes = this.quotes.filter((quote) => quote._id !== quoteId);
         console.log('quote deleted with id: ' + quoteId);
+        this.alertService.success('Das Zitat wurde erfolgreich gelöscht!');
       },
       error => console.error('error deleting quote:', error)
     );

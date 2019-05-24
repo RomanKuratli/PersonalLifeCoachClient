@@ -16,6 +16,7 @@ import { AstroComponent } from './pages/astro/astro.component';
 import { ConfigComponent } from './pages/config/config.component';
 import { ThanksComponent } from './pages/thanks/thanks.component';
 import { QuoteCardComponent } from './widgets/quote-card/quote-card.component';
+import { AlertComponent } from './alert/alert.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { QuoteCardComponent } from './widgets/quote-card/quote-card.component';
     AstroComponent,
     ConfigComponent,
     ThanksComponent,
-    QuoteCardComponent
+    QuoteCardComponent,
+    AlertComponent
   ],
   imports: [
     BrowserModule,

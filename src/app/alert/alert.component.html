@@ -1,0 +1,8 @@
+<div *ngFor="let alert of alerts" class="alert {{getCssClass(alert)}}" role="alert">
+  {{alert.msg}}
+  <button (click)="onClose(alert)" type="button" class="close">
+    <span>&times;</span>
+  </button>
+</div>
+
+
