@@ -12,6 +12,8 @@ export class QuoteCardComponent implements OnInit {
 
   constructor() {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    console.log('QuoteCardComponent.ngOnInit', this.quote);
+  }
 
 }

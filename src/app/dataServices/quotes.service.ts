@@ -17,6 +17,10 @@ export class QuotesService {
     return this.http.get<Quote[]>(this.quotesUrl);
   }
 
+  public getRandomQuote(): Observable<Quote> {
+    return this.http.get<Quote>(this.quotesUrl + '/random');
+  }
+
   public insertQuote(quote: Quote) {
     return this.http.post<Quote>(this.quotesUrl, quote);
   }

@@ -1,1 +1,16 @@
 <h1>HOME</h1>
+<div class="container card module">
+    <div class="card-header"><h2>Motivierende Zitate</h2></div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-lg-10">
+                <app-quote-card *ngIf="randomQuote" [quote]="randomQuote"></app-quote-card>
+            </div>
+            <div class="col-lg-2">
+                <div class="px-auto py-auto">
+                    <app-logo size="100" background="white" outerColor="darkgrey" innerColor="lightgrey" ></app-logo>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
