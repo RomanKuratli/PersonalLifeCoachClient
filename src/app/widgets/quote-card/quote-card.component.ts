@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Quote } from 'src/app/pages/quotes/quotes.component';
+import { Quote } from 'src/app/model/quote.model';
 
 @Component({
   selector: 'app-quote-card',

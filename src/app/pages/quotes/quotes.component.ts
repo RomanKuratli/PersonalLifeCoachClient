@@ -1,15 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { QuotesService } from 'src/app/dataServices/quotes.service';
 import { AlertService } from 'src/app/alert.service';
-
-export interface Quote {
-  _id?: string;
-  quote_hash?: number;
-  lang: string;
-  quote: string;
-  author: string;
-  source: string;
-}
+import { Quote} from 'src/app/model/quote.model';
 
 @Component({
   selector: 'app-quotes',

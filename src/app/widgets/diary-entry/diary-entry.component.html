@@ -1,0 +1,43 @@
+<div class="container">
+  <div class="row">
+    <div class="col-9 p-3">
+      <h4>{{this.formattedEntryDate}}</h4>
+      <hr>
+      <ul>
+        <li *ngFor="let entryItem of diaryEntry.entries">{{entryItem}}</li>
+      </ul>
+    </div>
+    <div class="col-3">
+      <p>TODO: Drag and drop</p>
+    </div>
+  </div>
+  <div class="row border-top">
+    <div class="col-12">
+      <p>Bilder: </p>
+      <div id="{{this.galleryId}}" class="gallery">
+        <p>TODO: Gallery</p>
+      </div>
+    </div>
+  </div>
+</div>
+<!--<div class="container">
+      <div class="row border-top">
+          <div class="col-12">
+              <p>Bilder:</p>
+              <div id="{{ gallery_id }}" class="gallery">
+                  {% if entry["pictures"] %}
+                      <script>
+                      window.addEventListener("load", (e) => {
+                          let gallery = document.getElementById("{{ gallery_id }}");
+                          let pictures = [];
+                          {% for url in entry["pictures"] %}
+                              pictures.push("{{ url }}");
+                          {% endfor %}
+                          feedGallery(gallery, pictures);
+                      });
+                      </script>
+                  {% endif %}
+              </div>
+          </div>
+      </div>
+  </div> -->

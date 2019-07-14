@@ -1,1 +1,5 @@
 <h1>Tagebuch</h1>
+<h2>Tagebucheinträge</h2>
+<div *ngFor="let diaryEntry of diaryEntries" class="container card">
+    <app-diary-entry [diaryEntry]="diaryEntry"></app-diary-entry>
+</div>

@@ -17,6 +17,7 @@ import { ConfigComponent } from './pages/config/config.component';
 import { ThanksComponent } from './pages/thanks/thanks.component';
 import { QuoteCardComponent } from './widgets/quote-card/quote-card.component';
 import { AlertComponent } from './alert/alert.component';
+import { DiaryEntryComponent } from './widgets/diary-entry/diary-entry.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { AlertComponent } from './alert/alert.component';
     ConfigComponent,
     ThanksComponent,
     QuoteCardComponent,
-    AlertComponent
+    AlertComponent,
+    DiaryEntryComponent
   ],
   imports: [
     BrowserModule,

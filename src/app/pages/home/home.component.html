@@ -1,10 +1,48 @@
 <h1>HOME</h1>
+
 <div class="container card module">
     <div class="card-header"><h2>Motivierende Zitate</h2></div>
     <div class="card-body">
         <div class="row">
             <div class="col-lg-10">
                 <app-quote-card *ngIf="randomQuote" [quote]="randomQuote"></app-quote-card>
+            </div>
+            <div class="col-lg-2">
+                <div class="px-auto py-auto">
+                    <app-logo size="100" background="white" outerColor="darkgrey" innerColor="lightgrey" ></app-logo>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container card module">
+    <div class="card-header"><h2>Neuer Tagebucheintrag</h2></div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-lg-10">
+                <form (ngSubmit)="onSubmit()" #heroForm="ngForm">
+                    <div class="form-group">
+                        <label for="entry_date">Datum:</label>
+                        <input [(ngModel)]="newDiaryEntry.entryDate" class="form-control" type="date" name="entry_date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="entries">Eintr&auml;ge: (Bitte mind. 3 Einträge jeweils mit Return trennen)</label>
+                        <textarea [(ngModel)]="newDiaryEntry.entriesDataArea" class="form-control" rows="4" name="entries" required></textarea>
+                    </div>
+                    <!--{{ diary_util.create_drag_and_drop_area("field", "entry_date", "gallery") }} -->
+                    <div class="border-top">
+                        <p>Bilder:</p>
+                        <div id="gallery" class="gallery"></div>
+                    </div>
+                    <input type="submit" value="Eintragen">
+                
+                </form>
+                <div *ngIf="goodDay">
+                    <hr>
+                    <h3>Erinnerst du dich noch?</h3>
+                    <app-diary-entry [diaryEntry]="goodDay"></app-diary-entry>
+                </div>
             </div>
             <div class="col-lg-2">
                 <div class="px-auto py-auto">
