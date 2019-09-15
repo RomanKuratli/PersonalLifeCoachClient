@@ -15,7 +15,9 @@
     <div class="col-12">
       <p>Bilder: </p>
       <div id="{{this.galleryId}}" class="gallery">
-        <p>TODO: Gallery</p>
+        <div class="imageContainer" *ngIf="diaryEntry.pictureUrls">
+          <app-diary-picture [pictureUrl]="url" *ngFor="let url of diaryEntry.pictureUrls"></app-diary-picture>
+        </div>
       </div>
     </div>
   </div>

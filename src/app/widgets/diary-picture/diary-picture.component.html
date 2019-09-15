@@ -1,0 +1,9 @@
+<div class="imageContainer" (onmouseover)="onMouseOver()" (onmouseout)="onMouseOut()">
+  <img src="http://localhost:4567/{{pictureUrl}}" alt="Diary Picture">
+    <button class="deleteBtn" ng-show="pictureHovered">
+      <span class="oi oi-delete"></span>
+    </button>
+    <button class="carouselBtn" data-toggle="modal" data-target="#pictureModal" ng-show="pictureHovered">
+      <span class="oi oi-resize-both"></span>
+    </button>
+</div>

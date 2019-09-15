@@ -18,6 +18,7 @@ import { ThanksComponent } from './pages/thanks/thanks.component';
 import { QuoteCardComponent } from './widgets/quote-card/quote-card.component';
 import { AlertComponent } from './alert/alert.component';
 import { DiaryEntryComponent } from './widgets/diary-entry/diary-entry.component';
+import { DiaryPictureComponent } from './widgets/diary-picture/diary-picture.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { DiaryEntryComponent } from './widgets/diary-entry/diary-entry.component
     ThanksComponent,
     QuoteCardComponent,
     AlertComponent,
-    DiaryEntryComponent
+    DiaryEntryComponent,
+    DiaryPictureComponent
   ],
   imports: [
     BrowserModule,
