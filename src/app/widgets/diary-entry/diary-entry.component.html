@@ -8,7 +8,10 @@
       </ul>
     </div>
     <div class="col-3">
-      <p>TODO: Drag and drop</p>
+      <div id="{{galleryId}}" class="form-group dropArea">
+        <p>You can drag and drop pictures here!</p>
+        <input id="dropInput" class="dropInput" type="file" multiple accept="image/*" onchange="onUploadPictures()">
+      </div>
     </div>
   </div>
   <div class="row border-top">

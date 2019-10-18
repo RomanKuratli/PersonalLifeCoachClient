@@ -33,4 +33,8 @@ export class DiaryEntryComponent implements OnInit {
     return `${WeekDayNames[d.getDay()]}, ${d.getDate()}.${MonthNames[d.getMonth()]}.${d.getFullYear()}`
   }
 
+  onDropPictures() {
+
+  }
+
 }
